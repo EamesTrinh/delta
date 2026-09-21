@@ -30,6 +30,7 @@ trait DeltaInsertIntoEvolutionSuiteBase extends DeltaInsertIntoTest with DeltaTa
   override protected def beforeAll(): Unit = {
     super.beforeAll()
     spark.conf.set(SQLConf.ANSI_ENABLED.key, "true")
+    spark.conf.set(DeltaSQLConf.DELTA_INSERT_IMPLICIT_CAST_RESOLUTION_FIX_ENABLED.key, "false")
   }
 
   test("all test cases are implemented") {

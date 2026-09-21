@@ -3784,7 +3784,7 @@ trait DeltaSQLConfBase extends DeltaSQLConfUtils {
           |is enabled."""
           .stripMargin)
       .booleanConf
-      .createWithDefault(DeltaUtils.isTesting)
+      .createWithDefault(true)
 
   val DELTA_STREAMING_INITIAL_SNAPSHOT_MAX_FILES =
     buildConf("streaming.initialSnapshotMaxFiles")
